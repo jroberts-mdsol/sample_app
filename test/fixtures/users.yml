@@ -1,1 +1,4 @@
-# empty
+cynthia:
+  name: Cynthia Dangis
+  email: cdangis@drangle.com
+  password_digest: <%= User.digest('drsteve') %>
