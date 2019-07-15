@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
       flash[:success] = "Welcome back, #{user.name.partition(' ').first}"
       log_in user
       params[:session][:remember_me] == '1'? remember(user): forget(user)
-      redirect_to user
+      redirect_back_or user
     else
       # Create error message
       flash.now[:danger] = 'Invalid email/password combination'
